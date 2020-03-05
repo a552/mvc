@@ -1,0 +1,12 @@
+version: 0.0
+os: windows
+files:
+  - source: \5529MVCFront\
+    destination: c:\inetpub\wwwroot\webtest
+hooks:
+  BeforeInstall:
+    - location: \deletewebsite.bat
+      timeout: 180
+  AfterInstall:
+    - location: \installwebsite.bat
+      timeout: 180
